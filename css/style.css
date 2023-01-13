@@ -106,8 +106,10 @@ hr {
 }
 
 /* top blog css end */
+
 .courses{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 23px;
     padding: 28px;
 }
@@ -159,8 +161,78 @@ hr {
     background: #FFE4E8;
     border-radius: 14.6913px;
     border: none;
-    padding: 7px 12px;
+    padding: 5px 12px;
 }
 .time button i{
     padding-right: 5px;
+}
+
+/* responsive style start here */
+
+/* Mobile divice  */
+@media screen and (max-width:576px) {
+    main {
+        padding: 12px;
+    }
+    .conatiner{
+        width: 100%;
+        margin: 12px;
+    }
+hr{
+    width: 100%;
+}
+    /* global mobile css end */
+
+    .players {
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player {
+        flex-direction: column;
+    }
+    .player h3{
+        padding-top: 10px;
+    }
+    /* top player mobile css end */
+    .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    main {
+        padding: 12px;
+    }
+    .conatiner{
+        width: 100%;
+        margin: 12px;
+    }
+hr{
+    width: 100%;
+}
+    /* global mobile css end */
+
+    .players {
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player {
+        flex-direction: column;
+    }
+    .player h3{
+        padding-top: 10px;
+    }
+    /* top player mobile css end */
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+     .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog{
+        flex-direction: column;
+    }
 }
